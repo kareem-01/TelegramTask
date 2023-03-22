@@ -15,13 +15,22 @@
         android:id="@+id/profile_pic"
         android:layout_width="match_parent"
         android:layout_height="320dp"
+        android:background="#E6E5E5"
         android:contentDescription="Profile Picture"
         android:src="@drawable/profile_image"
         app:layout_constraintTop_toTopOf="parent"
-        app:roundPercent="0"
-        android:background="#E6E5E5"
-        />
+        app:roundPercent="0" />
 
+    <ImageView
+        android:id="@+id/qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_arrow"
+        android:paddingEnd="24dp"
+
+        />
     <ImageView
         android:id="@+id/back_arrow"
         android:layout_width="wrap_content"
@@ -32,7 +41,6 @@
         android:contentDescription="Back Arrow"
         android:src="@drawable/arrow_left"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="@id/profile_pic" />
 
     <TextView
@@ -69,13 +77,16 @@
             android:id="@+id/linear"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="24dp"
+
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+
+                >
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -153,6 +164,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/profile_pic">
@@ -168,9 +180,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:drawablePadding="@dimen/icon_padding"
                     android:text="Notifications and Sounds"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/notification" />
 
 
                 <View
@@ -185,9 +199,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/icon_padding"
                     android:text="Privacy and Security"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/lock" />
 
 
                 <View
@@ -202,9 +218,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/icon_padding"
                     android:text="Data and Storage"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/storage" />
 
 
                 <View
@@ -219,6 +237,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/chat"
+                    android:drawablePadding="@dimen/icon_padding"
                     android:text="Chat Settings"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
@@ -252,9 +272,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/icon_padding"
                     android:text="Chat Folders"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/folder" />
 
 
                 <View
@@ -269,9 +291,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/icon_padding"
                     android:text="Devices"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/devices"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -284,9 +308,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/icon_padding"
                     android:text="Language"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    app:drawableLeftCompat="@drawable/language" />
 
 
             </LinearLayout>

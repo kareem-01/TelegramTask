@@ -28,9 +28,10 @@
             app:layout_constraintTop_toTopOf="parent"
 
 
-            ><CustomAttribute
-            app:attributeName="roundPercent"
-            app:customFloatValue="1" />
+            >
+            <CustomAttribute
+                app:attributeName="roundPercent"
+                app:customFloatValue="1" />
         </Constraint>
         <Constraint
 
@@ -87,6 +88,18 @@
             app:layout_constraintTop_toBottomOf="@id/profile_pic"
 
             />
+        <Constraint
+            android:id="@+id/qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qr"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back_arrow"
+            android:paddingEnd="24dp"
+            android:visibility="gone"
+
+            />
+
         <Constraint android:id="@id/widget" />
     </ConstraintSet>
 
